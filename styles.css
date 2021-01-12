@@ -1,0 +1,53 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  display: grid;
+  gap: 5px;
+  grid-template: [start ]150px [middle] 150px [end] / [start]1fr 1fr 1fr [content-end]1fr 1fr [content2-end ]1fr 1fr [end];
+
+  height: 100vh;
+  grid-auto-flow: row;
+  grid-auto-rows: 300px;
+}
+.item {
+  background-color: burlywood;
+  border: 1px solid black;
+  padding: 5px;
+  transition: transform 0.5s;
+}
+.item:hover {
+  background-color: burlywood;
+  border: 1px solid black;
+  padding: 5px;
+  transform: scale(1.05, 1.05);
+}
+.item:nth-child(1) {
+  grid-column: start / content-end;
+  grid-row: start/ end;
+  padding: 0;
+  background-size: cover;
+  background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.ytimg.com%2Fvi%2FzW1v0QBqTOs%2Fmaxresdefault.jpg&f=1&nofb=1");
+}
+
+.item:nth-child(2) {
+  grid-column: content-end / content2-end;
+  grid-row: start/ end;
+  background-size: 200px;
+  background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.ytimg.com%2Fvi%2FFddLh-QqNAU%2Fmaxresdefault.jpg&f=1&nofb=1");
+}
+.item:nth-child(3) {
+  grid-column: content2-end / end;
+  grid-row: start/ middle;
+  background-size: cover;
+  background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.ytimg.com%2Fvi%2F72TnRSNcBsY%2Fmaxresdefault.jpg&f=1&nofb=1");
+}
+.item:nth-child(4) {
+  background-size: cover;
+  background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.WURxdBDNW7tl8mCSP8vUewAAAA%26pid%3DApi&f=1");
+}
+.item:nth-child(5) {
+  background-size: cover;
+  background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2F66.media.tumblr.com%2F176ae2d286f0745f4e9156e983761d30%2Fef2728992d89c5a0-bd%2Fs540x810%2Ff00609f430df7fc95c3b1fc717bae1a788bfc142.png&f=1&nofb=1");
+}
